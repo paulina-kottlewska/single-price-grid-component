@@ -6,7 +6,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 
   - [Overview](#overview)
   - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [Link](#link)
   - [Design](#design)
   - [Built with](#built-with)
 
@@ -26,6 +26,9 @@ Users should be able to:
 ![](./images/single-price-grid-component-mobile.JPG)
 ![](./images/single-price-grid-component-desktop.JPG)
 
+### Link
+
+- Live Site URL: (https://single-price-grid-component-pk.netlify.app/)
 
 ### Design 
 
