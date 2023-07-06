@@ -1,0 +1,230 @@
+:root {
+    /* Colors Primary*/
+    --cyan: hsl(179, 62%, 43%);
+    --teal: hsl(177, 50%, 63%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --bright-yellow-hover: hsla(71, 93%, 54%, 0.8);
+
+    /* Colors Neutral */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font sizes */
+    --title-size-mobile: 1.1rem;
+    --main-title-size-mobile: 1.2rem;
+    --text-size-mobile: 0.9rem;
+    --guranatee-text-size-mobile: 1rem;
+    --full-access-size-mobile: 1rem;
+    --price-text-size-mobile: 1.9rem;
+    
+    --main-title-size-desktop: 1.5rem;
+    --title-size-desktop: 1.3rem;
+    --text-size-desktop: 1.1rem;
+    --guarantee-text-size-desktop: 1.2rem;
+    --full-access-size-desktop: 1.1rem;
+    --price-text-size-desktop: 2.1rem;
+    --why-us-text-size: 1rem;
+    
+    --footer-font: 0.7rem;
+
+    /* Border Radius*/
+    --border-radius: 6px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: var(--text-size-mobile);
+    background-color: var(--light-gray);
+    display: grid;
+    place-content: center;
+}
+
+main {
+    width: 320px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: grid;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box1, .box2, .box3 {
+    padding: 1.8rem 1.3rem;
+}
+
+.box1 {
+    background-color: var(--white);
+}
+
+.box2 {
+    background-color: var(--cyan);
+}
+
+.box3 {
+    background-color: var(--teal);
+}
+
+.main-title {
+    font-size: var(--main-title-size-mobile);
+    font-weight: 700;
+    color: var(--cyan);
+    margin: 0 0 1.4rem; 
+}
+
+.title {
+    font-size: var(--title-size-mobile);
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+}
+
+.guarantee {
+    color: var(--bright-yellow);
+    font-size: var(--guranatee-text-size-mobile);
+    font-weight: 700;
+    line-height: 1.2rem;
+}
+
+.box1 > .text {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+    color: var(--grayish-blue);
+    line-height: 1.6rem;
+}
+
+.text, .list {
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+}
+
+.list {
+    list-style-type: none;
+    line-height: 1.3rem;
+}
+
+.list:last-child {
+    margin-bottom: 0;
+}
+
+.box2 > .title, .box3 > .title {
+    margin-bottom: 1.2rem;
+}
+
+.price {
+    font-size: var(--price-text-size-mobile);
+    font-weight: 700;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+}
+
+.per-month {
+    color: var(--teal);
+    font-size: var(--full-access-size-mobile);
+}
+
+.full-access {
+    margin: 0.7rem 0 1.2rem;
+    font-size: var(--full-access-size-mobile);
+}
+
+.sign-up {
+    width: 100%;
+    height: 45px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: var(--full-access-size-mobile);
+    color: var(--white);
+    background-color: var(--bright-yellow);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 0.8rem;
+}
+
+.attribution { 
+    font-size: var(--footer-font); 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: var(--cyan); 
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: var(--text-size-desktop);
+    }
+    main {
+        width: 660px;
+        grid-template-areas: 
+        "join join"
+        "price why-us";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box1 {
+        grid-area: join;
+    }
+
+    .box2 {
+        grid-area: price;
+    }
+
+    .box3 {
+        grid-area: why-us;
+    }
+
+    .box1, .box2, .box3 {
+        padding: 2.5rem 2.1rem;
+    }
+    
+    .main-title {
+        font-size: var(--main-title-size-desktop);
+        margin-bottom: 1.5rem;
+    }
+
+    .guarantee {
+        font-size: var(--guarantee-text-size-desktop);
+    }
+
+    .box1 > .text {
+        margin-top: 0.8rem;
+    }
+
+    .title {
+        font-size: var(--title-size-desktop);
+    }
+
+    .price {
+        font-size: var(--price-text-size-desktop);
+    }
+
+    .full-access {
+        font-size: var(--full-access-size-desktop);
+    }
+
+    .sign-up {
+        height: 50px;
+        margin-top: 0.8rem;
+    }
+
+    .sign-up:hover {
+        background-color: var(--bright-yellow-hover);
+        cursor: pointer;
+    }
+
+    .list {
+        font-size: var(--why-us-text-size);
+        line-height: 1.4rem;
+    }
+}
